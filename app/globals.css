@@ -2,26 +2,190 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=Mooli&family=Poppins:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  /* --background-start-rgb: 214, 219, 220; 
+  --background-start-rgb: 15, 23, 42, 1
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* @media (prefers-color-scheme: dark) {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    /* --background-start-rgb: 0, 0, 0; 
+    --background-start-rgb: 15, 23, 42, 1
     --background-end-rgb: 0, 0, 0;
-  }
-}
+    /* --background-end-rgb: 15, 23, 42, 1 
+  } 
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    ) */
+
+    /* rgb(var(--background-start-rgb)); */
+    background-color: #0f172a;
+    font-family: 'Mooli', serif;
+  
+}
+main{
+  font-family: 'Mooli', serif;
+}
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.25);
+  animation: animate 8s ease-in-out infinite;
+}
+
+.bubble:nth-child(2){
+  position: relative;
+  zoom: 0.45;
+  left: -60px;
+  top: -110px;
+  animation-delay: -4s;
+
+}
+
+.bubble:nth-child(3){
+  position: relative;
+  zoom: 0.25;
+  right: -350px;
+  top: -404px;
+  animation-delay: -6s;
+
+}
+
+.bubble:nth-child(4){
+  position: relative;
+  zoom: 0.35;
+  left: -120px;
+  bottom: 20px;
+  animation-delay: -3s;
+
+}
+
+.bubble:nth-child(5){
+  position: relative;
+  zoom: 0.5;
+  left: 250px;
+  top: -120px;
+  animation-delay: -5s;
+
+}
+
+@keyframes animate {
+  0%, 100%{
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+.bubble::before{
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+  filter: blur(2px);
+  
+}
+
+
+.bubble::after{
+  content: '';
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+  filter: blur(2px);
+
+}
+
+.bubble span {
+  position: absolute;
+  border-radius: 50%;
+
+}
+.bubble span:nth-child(1){
+  inset: 10px;
+  border-left: 15px solid #0fb4ff;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(2){
+  inset: 10px;
+  border-right: 15px solid #ff4484;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(3){
+  inset: 20px;
+  border-top: 15px solid #f3eba4;
+  filter: blur(8px);
+}
+.bubble span:nth-child(4){
+  inset: 30px;
+  border-left: 15px solid #ff4484;
+  filter: blur(12px);
+}
+.bubble span:nth-child(5){
+  inset: 10px;
+  border-bottom: 10px solid #fff;
+  filter: blur(8px);
+  transform: rotate(330dep);
+}
+
+.animatedDiv{ 
+  overflow: hidden;
+}
+
+.navLinkButton{ 
+  position: inherit;
+  z-index: 2;
+}
+.animatedDiv::before{
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 773%;
+  left: 45%;
+  top: -133px;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+}
+
+.animatedDiv::after{
+  content: '';
+  position: absolute;
+  background: #060812;
+  inset: 1px;
+  border-radius: 5px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }

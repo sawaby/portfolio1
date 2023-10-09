@@ -8,57 +8,57 @@ import { motion, useInView } from 'framer-motion';
 const projectsData = [
     {
       id: 1,
-      title: "React Portfolio Website",
-      description: "Project 1 description",
-      image: "/images/projects/1.png",
-      tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "/",
+      title: "CodeBook",
+      description: "The Ultimate Ebook Store. React, e-commerce website",
+      image: "/images/projects/2.png",
+      tag: ["All", "React"],
+      gitUrl: "https://github.com/sawaby/CodeBook",
+      previewUrl: "http://codebook-m.netlify.app",
     },
     {
       id: 2,
-      title: "Potography Portfolio Website",
-      description: "Project 2 description",
-      image: "/images/projects/2.png",
-      tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "/",
+      title: "CineMate",
+      description: "Displays list of movies using TMDB API",
+      image: "/images/projects/3.png",
+      tag: ["All", "React"],
+      gitUrl: "https://github.com/sawaby/cinemate",
+      previewUrl: "http://cinemate-m.netlify.app",
     },
     {
       id: 3,
-      title: "E-commerce Application",
-      description: "Project 3 description",
-      image: "/images/projects/3.png",
-      tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "/",
+      title: "Shopping Cart",
+      description: "REACT Shopping cart using context and reducer.",
+      image: "/images/projects/5.png",
+      tag: ["All", "React"],
+      gitUrl: "https://github.com/sawaby/shopmatecr",
+      previewUrl: "http://shopmatecr-m.netlify.app",
     },
     {
       id: 4,
-      title: "Food Ordering Application",
-      description: "Project 4 description",
+      title: "Article Blog",
+      description: "Login, reate or remove articles. Using Firebase.",
       image: "/images/projects/4.png",
-      tag: ["All", "Mobile"],
-      gitUrl: "/",
-      previewUrl: "/",
+      tag: ["All", "React"],
+      gitUrl: "https://github.com/sawaby/ArticleBlog",
+      previewUrl: "http://articleblog-m.netlify.app/",
     },
     {
       id: 5,
-      title: "React Firebase Template",
-      description: "Authentication and CRUD operations",
-      image: "/images/projects/5.png",
-      tag: ["All", "Web"],
-      gitUrl: "/",
-      previewUrl: "/",
+      title: "ToDo App",
+      description: "A React project that add, remove, edit and save tasks.",
+      image: "/images/projects/6.png",
+      tag: ["All", "React"],
+      gitUrl: "https://github.com/sawaby/TaskMate",
+      previewUrl: "http://todoapp-f.netlify.app/",
     },
     {
       id: 6,
-      title: "Full-stack Roadmap",
-      description: "Project 6 description",
-      image: "/images/projects/6.png",
-      tag: ["All", "Web"],
+      title: "Kechie ERP Software",
+      description: "A fully scalable cloud ERP system. Been part of this amazing software.",
+      image: "/images/projects/kechie.png",
+      tag: ["All", "Progress"],
       gitUrl: "/",
-      previewUrl: "/",
+      previewUrl: "https://www.myofficeapps.com/",
     },
   ];
   
@@ -87,8 +87,8 @@ const ProjectsSection = () => {
       </h2>
         <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
             <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-            <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
-            <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
+            <ProjectTag onClick={handleTagChange} name="React" isSelected={tag === "React"} />
+            <ProjectTag onClick={handleTagChange} name="Progress" isSelected={tag === "Progress"} />
         </div>
     <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
         {filteredProjects.map((project, index) => (
