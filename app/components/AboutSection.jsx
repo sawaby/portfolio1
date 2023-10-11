@@ -6,20 +6,19 @@ import TabButtons from './TabButtons';
 
 const TAB_DATA = [
     {
-        title: "Skills",
-        id: "skills",
+        title: "Qualifications",
+        id: "qualifications",
         content: (
             <ul className='list-disc pl-2'>
-                <li>React</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Progress OpenEdge</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>API</li>
-                <li>jQuery</li>
+                <li>Bash and Shell scripting</li>
+                <li>Computer Networking</li>
+                <li>WebSpeed</li>
+                <li>OpenEdge 4GL/Progress</li>
+                <li>Cisco Routers</li>
+                <li>axios</li>
+                <li>AJAX</li>
+                <li>CSS</li>
+                <li>HTML5</li>
             </ul>
         )
     },
@@ -47,7 +46,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("qualifications");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -70,9 +69,9 @@ const AboutSection = () => {
                     I am excited to work with others to create amazing applications.
                 </p>
                 <div className="flex flex-row mt-8">
-                    <TabButtons selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
+                    <TabButtons selectTab={() => handleTabChange("qualifications")} active={tab === "qualifications"}>
                         {" "}
-                        Skills{" "}
+                        Qualifications{" "}
                     </TabButtons>
                     <TabButtons selectTab={() => handleTabChange("education")} active={tab === "education"}>
                         {" "}

@@ -19,7 +19,7 @@ const navLinks = [
     },
     {
         title: "Skills",
-        path: "#contact"
+        path: "#skills"
     }
 ]
 

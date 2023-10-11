@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.0.18",
+    "@mui/x-charts": "^6.0.0-alpha.14",
     "@sendgrid/mail": "^7.7.0",
     "autoprefixer": "10.4.16",
     "eslint": "8.50.0",
@@ -19,6 +22,7 @@
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-animated-numbers": "^0.16.0",
+    "react-card-flip": "^1.2.2",
     "react-dom": "18.2.0",
     "react-type-animation": "^3.1.0",
     "resend": "^1.1.0",
