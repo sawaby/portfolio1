@@ -32,8 +32,8 @@ const Navbar = () => {
         <div className='flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2'>
             <Link 
                 href={'/'} 
-                className='text-2xl md:text-5xl text-white font-semibold'>
-                <Image src="/images/logo2.png" width={50} height={50} alt='LOGO'/>
+                className='text-2xl md:text-5xl text-white font-semibold h-[50px] w-[50px]'>
+                <Image priority={true} src="/images/logo2.png" width="0" height="0" sizes="100vw" className="w-full h-auto" alt='LOGO'/>
             </Link>
             <div className="mobile-menu block md:hidden">
                 {

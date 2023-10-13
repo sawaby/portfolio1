@@ -3,9 +3,7 @@ import HeroSection from './components/HeroSection';
 import Navbar from './components/Header/Navbar';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/Projects/ProjectsSection';
-import EmailSection from './components/EmailSection';
 import Footer from './components/Footer';
-import AchievementsSection from './components/AchievementsSection';
 import Skills from './components/Skills';
 
 export default function Home() {
@@ -17,7 +15,6 @@ export default function Home() {
       <AboutSection />
       <Skills />
       <ProjectsSection />
-      {/* <EmailSection /> */}
       
     </div>
     <Footer />

@@ -31,7 +31,7 @@ const Skills = () => {
             <ProjectTag onClick={handleClick} name="BarChart" isSelected={tag === "BarChart"} />
             <ProjectTag onClick={handleClick} name="PieChart" isSelected={tag === "PieChart"} />
         </div>
-        <div className="flex flex-wrap justify-center">
+         <div className="flex flex-wrap justify-center">
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div className="h-[600px]">
                 <ThemeProvider theme={darkTheme}  >
@@ -44,9 +44,10 @@ const Skills = () => {
                             scaleType: 'band',
                             },
                         ]}
+  
                         series={[
                             {
-                            data: [80, 20, 85, 60, 20, 80, 60, 50, 80, 90, 90, 50, 30, 50, 100],
+                                data: [80, 85, 85, 60, 30, 80, 60, 50, 80, 90, 90, 50, 30, 50],
                             color: '#bb98a4',
                             },
                             
@@ -70,13 +71,13 @@ const Skills = () => {
                 </ThemeProvider>
             </div>
             <div className="h-[500px]">
-                <ThemeProvider theme={darkTheme}>
+              <ThemeProvider theme={darkTheme}>
                     <PieChart
                         
                         series={[
                             {
                             data: [
-                                { value: 50, label: 'React' },
+                                { value: 80, label: 'React' },
                                 { value: 85, label: 'Python' },
                                 { value: 85, label: 'JavaScript' },
                                 { value: 60, label: 'Node.js' },
@@ -87,9 +88,9 @@ const Skills = () => {
                                 { value: 80, label: 'API' },
                                 { value: 90, label: 'jQuery' },
                                 { value: 50, label: 'Java' },
-                                { value: 80, label: 'Procreate' },
+                                { value: 90, label: 'Procreate' },
                                 { value: 30, label: 'Illustrator' },
-                                { value: 40, label: 'Premiere' },
+                                { value: 50, label: 'Premiere' },
                             ],
                             innerRadius: 50,
                             outerRadius: 150,
@@ -105,7 +106,7 @@ const Skills = () => {
                 </ThemeProvider>
             </div>
         </ReactCardFlip>
-        </div>
+        </div> 
         
     </section>
   )
